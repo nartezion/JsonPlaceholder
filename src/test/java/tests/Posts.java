@@ -33,7 +33,10 @@ public class Posts {
 
         val actualPost = POSTS_STEPS.getPostById("1");
 
-        Assertions.assertThat(actualPost).isEqualTo(expectedPost);
+        Assertions.assertThat(actualPost.getId()).isEqualTo(expectedPost.getId());
+        Assertions.assertThat(actualPost.getBody()).isEqualTo(expectedPost.getBody());
+        Assertions.assertThat(actualPost.getTitle()).isEqualTo(expectedPost.getTitle());
+        Assertions.assertThat(actualPost.getUserId()).isEqualTo(expectedPost.getUserId());
     }
 
     @Test
